@@ -1,7 +1,5 @@
----
-bibliography: ["reference.bib"]
-cls: ["reference.cls"]
----
+[TOC]
+
 # CORA
 
 ## Requirmenets
@@ -53,3 +51,15 @@ WISDM 22$\rightarrow$WISDM 17 |  4 |  26.32 |  27.87 |  23.68 |  40.79 |  38.31 
 WISDM 27$\rightarrow$WISDM 15 |  4 |  56.25 |  22.18 |  27.08 |  60.42 |  52.34 |  66.42 |  $\pmb{72.22}$
 WISDM 17$\rightarrow$ HHAR 4 |  1 |  12.31 |  24.50 |  15.94 |  25.31 |  26.32 |  28.41 |  $\pmb{39.92}$
 HHAR 6$\rightarrow$ WISDM 19 |  1 |  44.50 |  43.09 |  46.19 |  44.08 |  45.93 |  51.86 |  $\pmb{53.03}$
+
+### Masking ratio sensitivity experiment
+
+The effect of the masking ratio on the performance of the temporal completion task is systematically investigated using different masking ratios (i.e., 12.5\%, 25\%, and 50\%) across three different time series applications. Results in Figure 1 show that a masking ratio of 12.5\% achieves optimal performance across all datasets. Higher ratios impede task performance, resulting in lower accuracy, MF1 score, and AUROC due to significant information loss in the original signal. Besides, the poor temporal correlation between large time segments prevents the temporal completer from effectively capturing the temporal information in the source domain.
+
+<table>
+<td ><center><img src="misc/maskingratio_acc.png" width="200" class="center">accuracy</center></td>
+<td ><center><img src="misc/maskingratio_f1.png" width="200" class="center">macro-F1</center></td>
+<td ><center><img src="misc/maskingratio_aoc.png" width="200" class="center">AUROC</center></td>
+</table>
+
+**Figure 1. Effect of different temporal masking ratios.**
